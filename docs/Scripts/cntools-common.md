@@ -256,6 +256,8 @@ Alternatively, you can check the node logs in `$CNODE_HOME/logs/` to see whether
 
 The `Import` feature of CNTools uses the [guide](https://gist.github.com/ilap/3fd57e39520c90f084d25b0ef2b96894) from [Ilap](https://github.com/ilap).
 
+!> Note: If importing a **hardware** wallet, you need to have Vacuumlabs `cardano-hw-cli` installed -> use the [`prereqs.sh`](basics.md#pre-requisites) `-w` flag to install/upgrade it. Currently supported models are: `Ledger S`, `Ledger X`, and `Trezor Model T`.
+
 If you would like to use `Import` function to import a Daedalus/Yoroi based 15 or 24 word wallet seed, please ensure that `cardano-address` and `bech32` bineries are available in your `$PATH` environment variable:
 ```
 bech32 --version
@@ -264,7 +266,7 @@ bech32 --version
 cardano-address --version
 3.5.0
 ```
-!> If not, please run the latest `prereqs.sh` from [here](basics.md) and rebuild `cardano-node` as instructed [here](Build/node-cli.md).
+!> If not, please run the latest `prereqs.sh` from [here](basics.md#pre-requisites) and rebuild `cardano-node` as instructed [here](Build/node-cli.md).
 
 To import a Daedalus/Yoroi wallet to CNTools, open CNTools and select the `[w] Wallet` option:
 ```
